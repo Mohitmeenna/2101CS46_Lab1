@@ -9,6 +9,11 @@ void subtraction(long int a, long int b)
 {
     printf("RESULT = %ld", a - b);
 }
+// function for multiplication 
+void multiplication(long int a, long int b)
+{
+    printf("RESULT = %ld", a * b);
+}
 
 int main()
 {
@@ -29,6 +34,9 @@ int main()
         break;
               case 2:
         subtraction(k, l);
+        break;
+case 3:
+        multiplication(k, l);
         break;
     }
     return 0;
