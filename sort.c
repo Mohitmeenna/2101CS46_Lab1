@@ -29,7 +29,21 @@ void InsertionSort(int array[], int size)
         array[j + 1] = key;
     }
 }
+void SelectionSort(int array[], int size)
+{
+    for (int step = 0; step < size - 1; step++)
+    {
+        int min = step;
+        for (int i = step + 1; i < size; i++)
+        {
 
+            if (array[i] < array[min])
+                min = i;
+        }
+
+        swap(&array[min], &array[step]);
+    }
+}
 
 int main()
 {
@@ -61,6 +75,11 @@ int main()
     if (op == 1)
     {
         InsertionSort(data, size);
+        printf("THIS IS THE SORTED ARRAY IN ASCENDING ORDER:\n");
+        print_array(data, size);
+    } else if (op == 2)
+    {
+        SelectionSort(data, size);
         printf("THIS IS THE SORTED ARRAY IN ASCENDING ORDER:\n");
         print_array(data, size);
     }
