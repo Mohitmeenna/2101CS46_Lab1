@@ -146,7 +146,18 @@ int Partition(int array[], int low, int high)
 
     return (i + 1);
 }
+void QuickSort(int array[], int low, int high)
+{
+    if (low < high)
+    {
 
+        int pi = Partition(array, low, high);
+
+        QuickSort(array, low, pi - 1);
+
+        QuickSort(array, pi + 1, high);
+    }
+}
 int main()
 {
 
@@ -198,6 +209,11 @@ int main()
         printf("THIS IS THE SORTED ARRAY IN ASCENDING ORDER: \n");
         print_array(data, size);
     }
-  
+  else if (op == 5)
+    {
+        QuickSort(data, 0, size - 1);
+        printf("THIS IS THE SORTED ARRAY IN ASCENDING ORDER: \n");
+        print_array(data, size);
+    }
     return 0;
 }
