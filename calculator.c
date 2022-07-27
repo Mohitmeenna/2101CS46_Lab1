@@ -4,6 +4,12 @@ void addition(long int a, long int b)
 {
     printf("RESULT = %ld", a + b);
 }
+// function for sub
+void subtraction(long int a, long int b)
+{
+    printf("RESULT = %ld", a - b);
+}
+
 int main()
 {
     long int k;
@@ -20,6 +26,9 @@ int main()
     {
     case 1:
         addition(k, l);
+        break;
+              case 2:
+        subtraction(k, l);
         break;
     }
     return 0;
