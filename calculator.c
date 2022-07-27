@@ -14,7 +14,26 @@ void multiplication(long int a, long int b)
 {
     printf("RESULT = %ld", a * b);
 }
-
+// function for division
+void division(long int a, long int b)
+{
+    if (b != 0) // else there will be error while dividing with zero
+    {
+        if (a % b != 0) // result will be float
+        {
+            float c = a / (float)b;
+            printf("RESULT = %f", c);
+        }
+        else // result will be an integer
+        {
+            printf("RESULT = %ld", a / b);
+        }
+    }
+    else
+    {
+        printf("division by 0 ERROR");
+    }
+}
 int main()
 {
     long int k;
@@ -37,6 +56,9 @@ int main()
         break;
 case 3:
         multiplication(k, l);
+        break;
+  case 4:
+        division(k, l);
         break;
     }
     return 0;
